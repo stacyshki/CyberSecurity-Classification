@@ -26,9 +26,9 @@ ML model to predict IncidentGrade using RandomForest and XGBoost with streamlit 
 
 ## 1. Clone repo
 
-git clone <link>
+git clone https://github.com/stacyshki/CyberSecurity-Classification.git
 
-cd link
+cd CyberSecurity-Classification
 
 ## 2. Create conda environment
 
@@ -46,6 +46,8 @@ streamlit run demo.py
 
 ## Project structure
 
+cloud for large files: [link](https://emlyon-my.sharepoint.com/:f:/g/personal/viktor_korotkov_edu_em-lyon_com/IgAWtrtH6NwDRpPNFOv-rneRAdgGx7n3lcQyp4bjXVDT8GQ?e=qvHnGM)
+
 CyberSecurity-Classification/
 
 ├── BasicPreprocessingModel.ipynb # model with basic preprocessing
@@ -62,7 +64,7 @@ CyberSecurity-Classification/
 
 ├── README.md
 
-├── data/ # data (downloaded and achieved)
+├── data/ # NOTE: THIS FOLDER IS IN THE CLOUD - data (downloaded and achieved)
 
 │ ├── catb_test.feather # for CatBoost
 
@@ -80,7 +82,7 @@ CyberSecurity-Classification/
 
 │ └── random_problem.png # used in BuildingModels.ipynb
 
-├── models/ # outcome models
+├── models/ # NOTE: THIS FOLDER IS IN THE CLOUD - outcome models
 
 │ ├── RF_specific.pk # best specific-company model
 
@@ -118,4 +120,4 @@ CyberSecurity-Classification/
 
 │ ├── streamlit.feather # dataset for streamlit (small sample of 100_000 instances from testing dataset)
 
-│ └── XGB_small.json # small model for streamlit trained on 100_000 training dataset
+│ └── XGB_small.json # NOTE: THIS FILE IS IN THE CLOUD - small model for streamlit trained on 100_000 training dataset
