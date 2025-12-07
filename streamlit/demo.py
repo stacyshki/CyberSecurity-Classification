@@ -75,6 +75,9 @@ if "click_counter" not in st.session_state:
 if do_pick:
     st.session_state["click_counter"] += 1
     chosen = df_sample.sample(n=1,random_state=SEED + st.session_state["click_counter"]).iloc[0]
+    row_dict = chosen.to_dict()
+    df_preview.write("Full row (raw):")
+    df_preview.json(row_dict, expanded=False)
     true_label = int(chosen["IncidentGrade"])
     truth_display.markdown(f"**True IncidentGrade:** `{true_label}` — {LABEL_MAP.get(true_label, str(true_label))}")
     X_row = chosen[feature_cols].to_frame().T.copy()
@@ -124,9 +127,9 @@ if do_pick:
 
 st.markdown("---")
 st.markdown("### Development notebooks")
-st.write("- Notebook on preprocessing:", '123')
-st.write("- Notebook on modelling:", '123')
-st.write("- Notebook on EDA:", '123')
+st.markdown("- [Notebook on preprocessing](https://github.com/stacyshki/CyberSecurity-Classification/blob/main/DataPreprocessing.ipynb)")
+st.markdown("- [Notebook on modelling](https://github.com/stacyshki/CyberSecurity-Classification/blob/main/BuildingModels.ipynb)")
+st.markdown("- [Notebook on EDA](https://github.com/stacyshki/CyberSecurity-Classification/blob/main/EDA.ipynb)")
 st.markdown("---")
 st.markdown("Made by **Viktor Korotkov**")
 
